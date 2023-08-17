@@ -7,6 +7,8 @@ package ventanas;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.awt.Image;
+import java.awt.Toolkit;
 
 /**
  *
@@ -24,7 +26,11 @@ private DefaultTableModel modelo = new DefaultTableModel();
         armarTabla();
         
     }
-
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/icons8-tienda-64.png"));
+        return retValue;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
